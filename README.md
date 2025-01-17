@@ -19,6 +19,7 @@ Utilidades para tu iglesia. ¡Proyecta y transmite directamente desde el mismo p
 - Windows 10 o superior
 - 4GB RAM mínimo
 - Resolución mínima de 1280x720
+- Python 3.8 o superior
 
 ## Instalación
 
