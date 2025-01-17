@@ -2,8 +2,8 @@
 
 Utilidades para tu iglesia. ¡Proyecta y transmite directamente desde el mismo programa!
 
-## Estado del Proyecto
-⚠️ **Este proyecto se encuentra en desarrollo activo y no está listo para uso en producción.**
+> [!IMPORTANT]
+> **Este proyecto se encuentra en desarrollo activo y no está listo para uso en producción.**
 
 ## Características
 - Proyección de letras de canciones
