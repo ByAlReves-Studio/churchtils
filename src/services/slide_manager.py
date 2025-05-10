@@ -51,3 +51,7 @@ class SlideManager:
     def get_current_index(self) -> int:
         """Retorna el índice actual"""
         return self.current_slide
+
+    def clear_screen(self) -> Dict[str, Any]:
+        """Deja la pantalla vacía retornando un diccionario vacío"""
+        return {}

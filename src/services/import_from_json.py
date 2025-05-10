@@ -69,7 +69,12 @@ class ImportFromJson:
               try:
                 with open(output_path, 'r', encoding='utf-8') as existing_file:
                     existing_data = json.load(existing_file)
-                    result.extend(existing_data)
+                    # Verificar duplicados antes de añadir
+                    for existing_song in existing_data:
+                        if existing_song['title'] == song_data['title'] and existing_song['artist'] == song_data['artist']:
+                            break
+                    else:
+                        result.extend(existing_data)
               except (FileNotFoundError, json.JSONDecodeError):
                 pass
                 
