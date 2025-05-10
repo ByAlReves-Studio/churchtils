@@ -50,7 +50,7 @@ class ProjectionModule:
         control_frame = tk.Frame(self.root, bg="black")
         control_frame.pack(side=tk.BOTTOM, fill=tk.X)
         tk.Button(control_frame, text="Siguiente (→)", command=self.next_slide).pack(side=tk.RIGHT, padx=10)
-        tk.Button(control_frame, text="Vaciar pantalla (✕)", command=self.start_projection).pack(side=tk.RIGHT, padx=10)
+        tk.Button(control_frame, text="Vaciar pantalla (✕)", command=self.clear_screen).pack(side=tk.RIGHT, padx=10)
         tk.Button(control_frame, text="Anterior (←)", command=self.previous_slide).pack(side=tk.RIGHT, padx=10)
 
         # Segunda ventana para proyección
