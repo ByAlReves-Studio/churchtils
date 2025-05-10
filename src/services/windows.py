@@ -206,6 +206,12 @@ class ProjectionModule:
                                      justify=tk.LEFT, 
                                      wraplength=500)
                 slide_label.pack(anchor="w")
+                
+                # Agregar evento de doble clic
+                slide_frame.bind('<Double-Button-1>', lambda e, text=slide_text: self.show_slide(text))
+                slide_label.bind('<Double-Button-1>', lambda e, text=slide_text: self.show_slide(text))
+                # Agregar evento de cambiar slide con el teclado              
+                slide_label.bind('')
 
             slides_frame.bind("<Configure>", lambda e: canvas.configure(scrollregion=canvas.bbox("all")))
         else:
@@ -219,6 +225,10 @@ class ProjectionModule:
         if 'slides' in song_data:
             slides_formatted = [{'text': slide} for slide in song_data['slides']]
             sm.load_slides(slides_formatted)
+
+    def show_slide(self, text):
+        if self.second_window and tk.Toplevel.winfo_exists(self.second_window):
+            self.projection_label.config(text=text)
 
     def update_projection(self):
         if self.second_window is None or not tk.Toplevel.winfo_exists(self.second_window):
