@@ -88,11 +88,9 @@ class ProjectionModule:
                 self.second_window = tk.Toplevel(self.root)
                 self.second_window.title("Público")
                 self.second_window.geometry(f"{width}x{height}+{x}+{y}")
-                self.second_window.attributes('-fullscreen', False)
-                self.second_window.configure(bg='black')
-                self.second_window.overrideredirect(True)
-                self.second_window.attributes('-topmost', True)
                 self.second_window.attributes('-fullscreen', True)
+                self.second_window.configure(bg='black')
+                self.second_window.attributes('-topmost', True)
                 # Crear un label para mostrar el contenido
                 self.projection_label = tk.Label(self.second_window, text="", font=("Arial", 36), bg="black", fg="white", wraplength=width-100, justify=tk.CENTER)
                 self.projection_label.pack(expand=True, fill=tk.BOTH, padx=50, pady=50)
